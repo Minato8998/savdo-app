@@ -204,7 +204,7 @@ function renderCart(){cart=cart.filter(x=>find(x.id));badge();
 async function checkout(){if(!cart.length)return toast("Savat bo'sh");
  const b={items:cart,name:$('oname').value,phone:$('phone').value,addr:$('addr').value,comment:$('cmt').value};
  if(!b.name.trim()||!b.phone.trim()||!b.addr.trim())return toast("Ism, telefon va manzilni yozing");
- $('obtn').disabled=true;try{await api('/api/order',{method:'POST',body:JSON.stringify(b)});cart=[];renderCart();toast("Buyurtma qabul qilindi ✓ To'lov botda");setTimeout(()=>tg.close&&tg.close(),1500)}catch(e){toast(e.message)}$('obtn').disabled=false}
+ $('obtn').disabled=true;try{await api('/api/order?d='+encodeURIComponent(JSON.stringify(b)));cart=[];renderCart();toast("Buyurtma qabul qilindi ✓ To'lov botda");setTimeout(()=>tg.close&&tg.close(),1500)}catch(e){toast(e.message)}$('obtn').disabled=false}
 
 /* ====== ADMIN ====== */
 function openAdmin(){go('adm')}
