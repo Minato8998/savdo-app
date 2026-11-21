@@ -166,7 +166,7 @@ async function api(path,opt={}){const r=await fetch(API+path,{...opt,headers:{'C
 const find=id=>P.find(x=>x.id==id);
 
 async function load(){try{const d=await api('/api/data');cats=d.cats;P=d.products;isAdmin=d.admin;delivery=d.delivery;
-  if(d.contact)$('contact').textContent="📞 Aloqa: "+d.contact}catch(e){toast("Xato: "+(e&&e.message?e.message:e))}
+  if(d.contact)$('contact').textContent="📞 Aloqa: "+d.contact}catch(e){toast("Serverga ulanib bo'lmadi")}
  $('admbtn').style.display=isAdmin?'flex':'none';renderHome();renderCats()}
 
 function card(p){const out=p.stock<=0;return `<div class="card p" onclick="openP(${p.id})"><div class="img">${pic(p)}</div><h4>${p.n}</h4><div class="price">${fmt(p.pr)}</div><div class="stk ${out?'no':''}">${out?'Tugagan':'Qoldiq: '+p.stock+' dona'}</div><button class="btn" onclick="event.stopPropagation();openP(${p.id})">${out?'Ko\'rish':'🛒 Tanlash'}</button></div>`}
