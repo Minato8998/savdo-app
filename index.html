@@ -15,8 +15,7 @@ main{flex:1;overflow-y:auto;padding:14px 14px 20px}
 .view{display:none}.view.on{display:block}.gold{color:var(--gold)}
 .card{background:linear-gradient(160deg,#1c1507,#0c0a05);border:1.5px solid var(--line);border-radius:18px;box-shadow:0 0 18px rgba(255,170,0,.12) inset}
 .btn{border:0;border-radius:14px;background:linear-gradient(180deg,#ffd23f,#f5a800);color:#1a1200;font-weight:700;font-size:15px;padding:12px 16px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;width:100%}
-.btn.ghost{background:none;border:1.5px solid var(--line);color:#fff}
-.btn:active{transform:scale(.98)}
+.btn.ghost{background:none;border:1.5px solid var(--line);color:#fff}.btn:active{transform:scale(.98)}
 header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
 .logo{width:56px;height:56px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;font-size:26px;background:#000;box-shadow:0 0 14px rgba(255,194,26,.5)}
 header h1{font-size:26px;font-weight:800}header p{color:var(--mut);font-size:13px}
@@ -30,31 +29,36 @@ header h1{font-size:26px;font-weight:800}header p{color:var(--mut);font-size:13p
 .sec{display:flex;align-items:center;justify-content:space-between;margin:6px 0 12px;font-size:20px;font-weight:700}
 .sec a{color:var(--gold);font-size:15px;cursor:pointer}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.p{padding:10px;position:relative;cursor:pointer}
-.p .img{height:110px;display:grid;place-items:center;font-size:62px}.p .img img,.row .img img,.big img{max-width:100%;max-height:100%;object-fit:contain;border-radius:10px}
-.disc{position:absolute;top:8px;left:8px;background:var(--red);font-weight:800;font-size:12px;padding:4px 9px;border-radius:10px}
-.p h4{font-size:15px;margin-top:4px}.price{font-size:18px;font-weight:800;color:var(--gold)}.old{font-size:12px;color:var(--mut);text-decoration:line-through;min-height:16px;margin-bottom:8px}
+.p{padding:10px;cursor:pointer}
+.p .img{height:120px;display:grid;place-items:center;font-size:60px}
+.img img,.big img{max-width:100%;max-height:100%;object-fit:contain;border-radius:10px}
+.p h4{font-size:15px;margin:4px 0}.price{font-size:18px;font-weight:800;color:var(--gold)}
+.stk{font-size:12px;color:var(--mut);margin:2px 0 8px}.stk.no{color:var(--red)}
 .p .btn{padding:9px;font-size:13px}
 .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:20px;font-weight:700}
 .top .back{font-size:24px;cursor:pointer;min-width:32px}
 .cats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .cat{padding:16px 8px;text-align:center;font-weight:600;font-size:14px;cursor:pointer}.cat span{display:block;font-size:40px;margin-bottom:6px}.cat small{display:block;color:var(--mut);font-weight:400;font-size:11px;margin-top:2px}
 .row{display:flex;gap:12px;align-items:center;padding:12px;margin-bottom:12px;position:relative}
-.row .img{font-size:44px;width:64px;height:64px;display:grid;place-items:center}.row h4{font-size:15px}
+.row .img{width:64px;height:64px;display:grid;place-items:center;font-size:40px}.row h4{font-size:15px;padding-right:18px}.row small{color:var(--mut)}
 .qty{display:flex;align-items:center;gap:10px;margin-top:8px}.qty button{width:32px;height:28px;border-radius:9px;border:1.5px solid var(--line);background:none;color:#fff;font-size:18px;cursor:pointer}.qty b{min-width:18px;text-align:center}
 .x{position:absolute;top:8px;right:12px;color:var(--mut);cursor:pointer}
-.total{display:flex;justify-content:space-between;font-size:20px;font-weight:700;margin:14px 4px 12px}
+.total{display:flex;justify-content:space-between;font-size:18px;font-weight:700;margin:6px 4px}
 .empty{text-align:center;color:var(--mut);padding:40px 10px;grid-column:1/3}
-.big{height:220px;display:grid;place-items:center;font-size:120px;margin-bottom:12px;padding:10px}
-.desc li{margin:4px 0 4px 18px;color:var(--mut)}
+.big{height:240px;display:grid;place-items:center;font-size:120px;margin-bottom:8px;padding:10px}
+.thumbs{display:flex;gap:8px;margin-bottom:10px;overflow-x:auto}.thumbs img{width:56px;height:56px;object-fit:cover;border-radius:10px;border:1.5px solid var(--line);cursor:pointer}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 12px}.chip{padding:8px 14px;border-radius:12px;border:1.5px solid var(--line);cursor:pointer;font-size:14px}.chip.on{background:var(--gold);color:#1a1200;font-weight:700}
+.lbl{color:var(--mut);font-size:13px;margin-top:8px}
 .buy{display:flex;gap:10px;margin-top:16px}.buy .qty{margin:0;border:1.5px solid var(--line);border-radius:14px;padding:4px 10px}
 .user{display:flex;gap:14px;align-items:center;margin-bottom:14px}.ava{width:76px;height:76px;border-radius:50%;border:2.5px solid var(--gold);display:grid;place-items:center;font-size:40px;background:#222;overflow:hidden}
 .user h3{font-size:20px}.user p{color:var(--mut);font-size:14px}
 .menu{padding:4px 14px;margin-bottom:12px}.menu div{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid rgba(255,194,26,.15);cursor:pointer;font-size:15px}.menu div:last-child{border:0}
-input.f,select.f,textarea.f{width:100%;background:#0d0b06;border:1.5px solid var(--line);border-radius:12px;color:#fff;padding:12px;font-size:14px;margin-bottom:10px;font-family:inherit;outline:0}
-label.l{display:block;color:var(--mut);font-size:12px;margin:0 0 4px 4px}
-.arow{display:flex;align-items:center;gap:10px;padding:10px;margin-bottom:10px}.arow .img{width:48px;height:48px;display:grid;place-items:center;font-size:30px}.arow .img img{max-width:100%;max-height:100%;border-radius:8px}.arow .i{flex:1;font-size:14px}.arow .i b{display:block}
+.f{width:100%;background:#0d0b06;border:1.5px solid var(--line);border-radius:12px;color:#fff;padding:12px;font-size:14px;margin-bottom:10px;font-family:inherit;outline:0}
+.l{display:block;color:var(--mut);font-size:12px;margin:0 0 4px 4px}
+.arow{display:flex;align-items:center;gap:10px;padding:10px;margin-bottom:10px}.arow .img{width:48px;height:48px;display:grid;place-items:center;font-size:28px}.arow .i{flex:1;font-size:14px}.arow .i b{display:block}
 .arow button{background:none;border:1.5px solid var(--line);color:#fff;border-radius:10px;padding:7px 10px;font-size:15px;cursor:pointer}
+.ph{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.ph div{position:relative}.ph img{width:60px;height:60px;object-fit:cover;border-radius:10px}.ph span{position:absolute;top:-6px;right:-6px;background:var(--red);border-radius:50%;width:20px;height:20px;display:grid;place-items:center;font-size:11px;cursor:pointer}
+.tabs{display:flex;gap:8px;margin-bottom:12px}.tabs .btn{padding:10px}
 nav{display:flex;border-top:1.5px solid var(--line);background:#050407;padding-bottom:env(safe-area-inset-bottom)}
 nav div{flex:1;text-align:center;padding:9px 0 8px;font-size:11px;cursor:pointer;position:relative}
 nav div span{display:block;font-size:22px;filter:grayscale(1) brightness(1.6)}
@@ -84,17 +88,23 @@ nav b{position:absolute;top:2px;left:55%;background:var(--red);font-size:10px;bo
   <div class="grid" id="catprods"></div>
  </section>
  <section class="view" id="cart">
-  <div class="top"><span class="back" onclick="go('home')">←</span><span>Savat</span><span class="back" onclick="cart={};renderCart()">🗑</span></div>
+  <div class="top"><span class="back" onclick="go('home')">←</span><span>Savat</span><span class="back" onclick="cart=[];renderCart()">🗑</span></div>
   <div id="cartlist"></div>
-  <div class="total"><span>Jami:</span><span class="gold" id="sum">0 so'm</span></div>
-  <input class="f" id="phone" type="tel" placeholder="Telefon raqamingiz (+998...)">
+  <div class="total"><span>Mahsulotlar:</span><span id="sub">0</span></div>
+  <div class="total"><span>Yetkazish:</span><span id="dlv">0</span></div>
+  <div class="total"><span>Jami:</span><span class="gold" id="sum">0</span></div>
+  <div style="height:8px"></div>
+  <input class="f" id="oname" placeholder="Ismingiz">
+  <input class="f" id="phone" type="tel" placeholder="Telefon (+998...)">
   <input class="f" id="addr" placeholder="Manzil">
-  <button class="btn" onclick="checkout()">Buyurtma berish ›</button>
+  <input class="f" id="cmt" placeholder="Izoh (ixtiyoriy)">
+  <button class="btn" id="obtn" onclick="checkout()">Buyurtma berish ›</button>
+  <p class="lbl" style="text-align:center;margin-top:8px">Buyurtmadan keyin to'lov ma'lumoti botga yuboriladi.</p>
  </section>
  <section class="view" id="prod"></section>
  <section class="view" id="help">
   <div class="top"><span class="back" onclick="go('home')">←</span><span>Yordam</span><span class="back"></span></div>
-  <div class="card menu"><div>📞 Operator: +998 90 000 00 00</div><div>💬 Telegram: @sizning_admin</div><div>🚚 Yetkazib berish shartlari</div></div>
+  <div class="card menu"><div id="contact">📞 Aloqa</div><div onclick="tg.close&&tg.close()">💬 Botga qaytish</div></div>
  </section>
  <section class="view" id="me">
   <div class="top"><span class="back" onclick="go('home')">←</span><span>Profil</span><span class="back"></span></div>
@@ -104,16 +114,27 @@ nav b{position:absolute;top:2px;left:55%;background:var(--red);font-size:10px;bo
  </section>
  <section class="view" id="adm">
   <div class="top"><span class="back" onclick="go('me')">←</span><span>Admin panel</span><span class="back"></span></div>
-  <div id="admlist"></div>
-  <button class="btn" onclick="editP()">➕ Mahsulot qo'shish</button>
-  <div id="form" class="card" style="display:none;padding:14px;margin-top:14px">
-   <label class="l">Nomi</label><input class="f" id="fn">
-   <label class="l">Katalog</label><select class="f" id="fc"></select>
-   <label class="l">Narxi (so'm)</label><input class="f" id="fp" type="number" inputmode="numeric">
-   <label class="l">Eski narxi (chegirma uchun, ixtiyoriy)</label><input class="f" id="fo" type="number" inputmode="numeric">
-   <label class="l">Tavsif (har qatorga bittadan)</label><textarea class="f" id="ft" rows="3"></textarea>
-   <label class="l">Rasm</label><input class="f" id="ff" type="file" accept="image/*">
-   <div style="display:flex;gap:10px"><button class="btn" onclick="saveP()">Saqlash</button><button class="btn ghost" onclick="$('form').style.display='none'">Bekor</button></div>
+  <div class="tabs"><button class="btn" id="t1" onclick="admTab(1)">Mahsulotlar</button><button class="btn ghost" id="t2" onclick="admTab(2)">Kataloglar</button></div>
+  <div id="a1">
+   <div id="admlist"></div>
+   <button class="btn" onclick="editP()">➕ Mahsulot qo'shish</button>
+   <div id="form" class="card" style="display:none;padding:14px;margin-top:14px">
+    <label class="l">Nomi</label><input class="f" id="fn">
+    <label class="l">Katalog</label><select class="f" id="fc"></select>
+    <label class="l">Narxi (so'm)</label><input class="f" id="fp" type="number" inputmode="numeric">
+    <label class="l">Qoldiq (nechta bor)</label><input class="f" id="fs" type="number" inputmode="numeric">
+    <label class="l">Ranglar (vergul bilan: Qora, Oq)</label><input class="f" id="fcol">
+    <label class="l">O'lchamlar (vergul bilan: S, M, L)</label><input class="f" id="fsz">
+    <label class="l">Tavsif</label><textarea class="f" id="fi" rows="3"></textarea>
+    <label class="l">Rasmlar</label><div class="ph" id="fph"></div>
+    <input class="f" id="ff" type="file" accept="image/*" multiple>
+    <div style="display:flex;gap:10px"><button class="btn" id="sbtn" onclick="saveP()">Saqlash</button><button class="btn ghost" onclick="$('form').style.display='none'">Bekor</button></div>
+   </div>
+  </div>
+  <div id="a2" style="display:none">
+   <div id="admcats"></div>
+   <input class="f" id="newcat" placeholder="Yangi katalog nomi">
+   <button class="btn" onclick="addCat()">➕ Katalog qo'shish</button>
   </div>
  </section>
 </main>
@@ -134,60 +155,79 @@ try{tg.ready();tg.expand();tg.setHeaderColor&&tg.setHeaderColor('#07060a');tg.se
 /* ====== SOZLAMA: serveringiz manzili (oxirida / bo'lmasin) ====== */
 const API="https://id315.vps.doliyev.uz";
 
-const C=[["🎧","Elektronika"],["🔌","Maishiy texnika"],["👕","Kiyim"],["👟","Poyabzallar"],["👜","Aksessuarlar"],["🧴","Go'zallik va parvarish"],["❤️","Salomatlik"],["🏠","Uy-ro'zg'or buyumlari"],["🛠️","Qurilish va ta'mirlash"],["🚗","Avtotovarlar"],["🧸","Bolalar tovarlari"],["🎨","Xobbi va ijod"],["🏀","Sport va hordiq"],["📓","Kanselyariya tovarlari"],["🐾","Hayvonlar uchun tovarlar"]];
-const DEMO=[{id:"d1",n:"AirPods Pro 2",cat:0,pr:1999000,old:2899000,t:["Yangi avlod quloqchinlari","30 soatgacha ishlash"]},{id:"d2",n:"Smart Watch 9",cat:0,pr:799000,old:1299000,t:["AMOLED ekran"]}];
-let P=[],cart={},isAdmin=false,editId=null,curImg="";
+const ICONS=[[/elektron/i,"🎧"],[/maishiy tex/i,"🔌"],[/kiyim|futbolka/i,"👕"],[/poyabzal|krossovka/i,"👟"],[/aksessuar/i,"👜"],[/go.?zallik/i,"🧴"],[/salomat/i,"❤️"],[/uy.?ro/i,"🏠"],[/qurilish/i,"🛠️"],[/avto/i,"🚗"],[/bolalar/i,"🧸"],[/xobbi/i,"🎨"],[/sport/i,"🏀"],[/kansel/i,"📓"],[/hayvon/i,"🐾"]];
+let cats=[],P=[],cart=[],isAdmin=false,delivery=0,editId=null,curPh=[],sel={c:"",s:"",q:1};
+const icon=cid=>{const c=cats.find(x=>x.id==cid);const n=c?c.name:"";const m=ICONS.find(i=>i[0].test(n));return m?m[1]:"📦"};
 const fmt=n=>Number(n).toLocaleString('ru-RU').replace(/\u00a0/g,' ')+" so'm";
-const disc=p=>p.old>p.pr?Math.round((1-p.pr/p.old)*100):0;
-const pic=p=>p.img?`<img src="${p.img.startsWith('http')?p.img:API+p.img}">`:C[p.cat]?C[p.cat][0]:"📦";
-function toast(m){const t=$('toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1600)}
+const purl=f=>API+"/api/photo/"+encodeURIComponent(f);
+const pic=p=>p.photos&&p.photos.length?`<img src="${purl(p.photos[0])}" loading="lazy">`:icon(p.cat);
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('on');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('on'),1800)}
 async function api(path,opt={}){const r=await fetch(API+path,{...opt,headers:{'Content-Type':'application/json','X-Init':tg.initData||''}});const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error(j.error||r.status);return j}
+const find=id=>P.find(x=>x.id==id);
 
-async function load(){try{const d=await api('/api/data');P=d.products;isAdmin=d.admin}catch(e){P=DEMO;isAdmin=false;toast("Serverga ulanib bo'lmadi (demo)")}
+async function load(){try{const d=await api('/api/data');cats=d.cats;P=d.products;isAdmin=d.admin;delivery=d.delivery;
+  if(d.contact)$('contact').textContent="📞 Aloqa: "+d.contact}catch(e){toast("Serverga ulanib bo'lmadi")}
  $('admbtn').style.display=isAdmin?'flex':'none';renderHome();renderCats()}
 
-function card(p){const d=disc(p);return `<div class="card p" onclick="openP('${p.id}')">${d?`<span class="disc">-${d}%</span>`:''}<div class="img">${pic(p)}</div><h4>${p.n}</h4><div class="price">${fmt(p.pr)}</div><div class="old">${d?fmt(p.old):''}</div><button class="btn" onclick="event.stopPropagation();add('${p.id}')">🛒 Savatga qo'shish</button></div>`}
-function renderHome(f=""){const l=[...P].reverse().filter(p=>p.n.toLowerCase().includes(f.toLowerCase())).slice(0,f?99:8);$('list').innerHTML=l.map(card).join("")||'<div class="empty">Hech narsa topilmadi.</div>'}
+function card(p){const out=p.stock<=0;return `<div class="card p" onclick="openP(${p.id})"><div class="img">${pic(p)}</div><h4>${p.n}</h4><div class="price">${fmt(p.pr)}</div><div class="stk ${out?'no':''}">${out?'Tugagan':'Qoldiq: '+p.stock+' dona'}</div><button class="btn" onclick="event.stopPropagation();openP(${p.id})">${out?'Ko\'rish':'🛒 Tanlash'}</button></div>`}
+function renderHome(f=""){const l=P.filter(p=>p.n.toLowerCase().includes(f.toLowerCase())).slice(0,f?99:8);$('list').innerHTML=l.map(card).join("")||'<div class="empty">Hozircha mahsulot yo\'q.</div>'}
 $('q').oninput=e=>renderHome(e.target.value);
-function renderCats(){$('catlist').innerHTML=C.map((c,i)=>`<div class="card cat" onclick="showCat(${i})"><span>${c[0]}</span>${c[1]}<small>${P.filter(p=>p.cat==i).length} ta mahsulot</small></div>`).join("");
- $('fc').innerHTML=C.map((c,i)=>`<option value="${i}">${c[0]} ${c[1]}</option>`).join("")}
-function showCat(i){const l=P.filter(p=>i<0||p.cat==i);$('cattitle').textContent=i<0?"Barcha mahsulotlar":C[i][1];$('catprods').innerHTML=l.map(card).join("")||"<div class='empty'>Bu bo'limda hali mahsulot yo'q.</div>";go('catv')}
+function renderCats(){$('catlist').innerHTML=cats.map(c=>`<div class="card cat" onclick="showCat(${c.id})"><span>${icon(c.id)}</span>${c.name}<small>${P.filter(p=>p.cat==c.id).length} ta mahsulot</small></div>`).join("")||'<div class="empty">Katalog bo\'sh.</div>';
+ $('fc').innerHTML=cats.map(c=>`<option value="${c.id}">${icon(c.id)} ${c.name}</option>`).join("")}
+function showCat(id){const l=P.filter(p=>id<0||p.cat==id);const c=cats.find(x=>x.id==id);$('cattitle').textContent=id<0?"Barcha mahsulotlar":c.name;$('catprods').innerHTML=l.map(card).join("")||"<div class='empty'>Bu bo'limda hali mahsulot yo'q.</div>";go('catv')}
 
 function go(v){document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id===v));
  const m={catv:'cats',prod:'home',adm:'me'}[v]||v;document.querySelectorAll('nav div').forEach(x=>x.classList.toggle('on',x.dataset.t===m));
- if(v==='cart')renderCart();$('adm').classList.contains('on')&&renderAdmin();document.querySelector('main').scrollTop=0}
+ if(v==='cart')renderCart();if(v==='adm')renderAdmin();document.querySelector('main').scrollTop=0}
 document.querySelectorAll('nav div').forEach(x=>x.onclick=()=>go(x.dataset.t));
 
-function add(id,n=1){cart[id]=(cart[id]||0)+n;badge();toast("Savatga qo'shildi ✓");try{tg.HapticFeedback.impactOccurred('light')}catch(e){}}
-function badge(){const c=Object.values(cart).reduce((a,b)=>a+b,0);$('badge').hidden=!c;$('badge').textContent=c}
-function chg(id,d){cart[id]+=d;if(cart[id]<=0)delete cart[id];renderCart()}
-const find=id=>P.find(x=>x.id==id);
-function renderCart(){Object.keys(cart).forEach(i=>{if(!find(i))delete cart[i]});badge();const ids=Object.keys(cart);
- $('cartlist').innerHTML=ids.length?ids.map(i=>{const p=find(i);return `<div class="card row"><div class="img">${pic(p)}</div><div><h4>${p.n}</h4><div class="price" style="font-size:16px">${fmt(p.pr)}</div><div class="qty"><button onclick="chg('${i}',-1)">−</button><b>${cart[i]}</b><button onclick="chg('${i}',1)">+</button></div></div><span class="x" onclick="delete cart['${i}'];renderCart()">✕</span></div>`}).join(""):"<div class='empty'>🛒<br>Savat bo'sh. Katalogdan mahsulot qo'shing.</div>";
- $('sum').textContent=fmt(ids.reduce((s,i)=>s+find(i).pr*cart[i],0))}
-function openP(id){const p=find(id);const d=disc(p);
- $('prod').innerHTML=`<div class="top"><span class="back" onclick="history.length&&go('home')">←</span><span></span><span class="back"></span></div><div class="card big">${pic(p)}</div><h2 style="font-size:22px">${p.n}</h2><div style="color:var(--mut);font-size:13px;margin:2px 0">${C[p.cat]?C[p.cat][1]:''}</div><div style="display:flex;justify-content:space-between;align-items:center"><div class="price" style="font-size:26px">${fmt(p.pr)}</div>${d?`<span class="disc" style="position:static">-${d}%</span>`:''}</div><div class="old">${d?fmt(p.old):''}</div>${p.t&&p.t.length?`<b>Tavsif:</b><ul class="desc">${p.t.map(x=>`<li>${x}</li>`).join("")}</ul>`:''}<div class="buy"><div class="qty"><button onclick="pq(-1)">−</button><b id="pq">1</b><button onclick="pq(1)">+</button></div><button class="btn" onclick="add('${p.id}',+$('pq').textContent)">🛒 Savatga qo'shish</button></div>`;go('prod')}
-function pq(d){$('pq').textContent=Math.max(1,+$('pq').textContent+d)}
-async function checkout(){const items=Object.keys(cart).map(i=>({id:i,qty:cart[i]}));if(!items.length)return toast("Savat bo'sh");
- if(!$('phone').value.trim())return toast("Telefon raqamingizni yozing");
- try{await api('/api/order',{method:'POST',body:JSON.stringify({items,phone:$('phone').value,addr:$('addr').value})});cart={};renderCart();toast("Buyurtma qabul qilindi ✓")}catch(e){toast("Xatolik: "+e.message)}}
+/* ====== MAHSULOT ====== */
+function openP(id){const p=find(id);sel={c:p.colors[0]||"",s:p.sizes[0]||"",q:1};
+ $('prod').innerHTML=`<div class="top"><span class="back" onclick="go('home')">←</span><span></span><span class="back"></span></div><div class="card big" id="bigimg">${pic(p)}</div>${p.photos.length>1?`<div class="thumbs">${p.photos.map(f=>`<img src="${purl(f)}" onclick="$('bigimg').innerHTML='<img src=\\'${purl(f)}\\'>'">`).join("")}</div>`:''}
+ <h2 style="font-size:22px">${p.n}</h2><div class="price" style="font-size:26px;margin:4px 0">${fmt(p.pr)}</div><div class="stk ${p.stock<=0?'no':''}">${p.stock<=0?'Hozircha tugagan':'Qoldiq: '+p.stock+' dona'}</div>
+ ${p.info?`<p style="color:var(--mut);margin:8px 0;white-space:pre-line">${p.info}</p>`:''}
+ ${p.colors.length?`<div class="lbl">Rang:</div><div class="chips" id="chc">${p.colors.map(c=>`<div class="chip ${c==sel.c?'on':''}" onclick="pick('c','${c}',this)">${c}</div>`).join("")}</div>`:''}
+ ${p.sizes.length?`<div class="lbl">O'lcham:</div><div class="chips" id="chs">${p.sizes.map(c=>`<div class="chip ${c==sel.s?'on':''}" onclick="pick('s','${c}',this)">${c}</div>`).join("")}</div>`:''}
+ ${p.stock>0?`<div class="buy"><div class="qty"><button onclick="pq(-1)">−</button><b id="pq">1</b><button onclick="pq(1,${p.stock})">+</button></div><button class="btn" onclick="addCart(${p.id})">🛒 Savatga qo'shish</button></div>`:''}`;go('prod')}
+function pick(k,v,el){sel[k]=v;[...el.parentNode.children].forEach(x=>x.classList.toggle('on',x===el))}
+function pq(d,max=99){sel.q=Math.min(max,Math.max(1,sel.q+d));$('pq').textContent=sel.q}
+function addCart(id){const p=find(id);const e=cart.find(x=>x.id==id&&x.color==sel.c&&x.size==sel.s);const have=e?e.qty:0;
+ if(have+sel.q>p.stock)return toast("Qoldiq yetarli emas");
+ e?e.qty+=sel.q:cart.push({id,color:sel.c,size:sel.s,qty:sel.q});badge();toast("Savatga qo'shildi ✓");try{tg.HapticFeedback.impactOccurred('light')}catch(e){}}
+
+/* ====== SAVAT ====== */
+function badge(){const c=cart.reduce((a,b)=>a+b.qty,0);$('badge').hidden=!c;$('badge').textContent=c}
+function chg(i,d){const it=cart[i],p=find(it.id);it.qty=Math.min(p.stock,it.qty+d);if(it.qty<=0)cart.splice(i,1);renderCart()}
+function renderCart(){cart=cart.filter(x=>find(x.id));badge();
+ $('cartlist').innerHTML=cart.length?cart.map((it,i)=>{const p=find(it.id);return `<div class="card row"><div class="img">${pic(p)}</div><div><h4>${p.n}</h4><small>${[it.color,it.size].filter(Boolean).join(" · ")}</small><div class="price" style="font-size:16px">${fmt(p.pr)}</div><div class="qty"><button onclick="chg(${i},-1)">−</button><b>${it.qty}</b><button onclick="chg(${i},1)">+</button></div></div><span class="x" onclick="cart.splice(${i},1);renderCart()">✕</span></div>`}).join(""):"<div class='empty'>🛒<br>Savat bo'sh. Katalogdan mahsulot qo'shing.</div>";
+ const s=cart.reduce((a,it)=>a+find(it.id).pr*it.qty,0);$('sub').textContent=fmt(s);$('dlv').textContent=fmt(cart.length?delivery:0);$('sum').textContent=fmt(cart.length?s+delivery:0);
+ const u=tg.initDataUnsafe&&tg.initDataUnsafe.user;if(u&&!$('oname').value)$('oname').value=[u.first_name,u.last_name].filter(Boolean).join(' ')}
+async function checkout(){if(!cart.length)return toast("Savat bo'sh");
+ const b={items:cart,name:$('oname').value,phone:$('phone').value,addr:$('addr').value,comment:$('cmt').value};
+ if(!b.name.trim()||!b.phone.trim()||!b.addr.trim())return toast("Ism, telefon va manzilni yozing");
+ $('obtn').disabled=true;try{await api('/api/order',{method:'POST',body:JSON.stringify(b)});cart=[];renderCart();toast("Buyurtma qabul qilindi ✓ To'lov botda");setTimeout(()=>tg.close&&tg.close(),1500)}catch(e){toast(e.message)}$('obtn').disabled=false}
 
 /* ====== ADMIN ====== */
 function openAdmin(){go('adm')}
-function renderAdmin(){$('admlist').innerHTML=P.map(p=>`<div class="card arow"><div class="img">${pic(p)}</div><div class="i"><b>${p.n}</b>${fmt(p.pr)} · ${C[p.cat]?C[p.cat][1]:''}</div><button onclick="editP('${p.id}')">✏️</button><button onclick="delP('${p.id}')">🗑</button></div>`).join("")||"<div class='empty' style='padding:10px'>Hali mahsulot yo'q.</div>"}
-function editP(id){const p=id?find(id):{};editId=id||null;curImg=p.img||"";
- $('fn').value=p.n||"";$('fc').value=p.cat||0;$('fp').value=p.pr||"";$('fo').value=p.old||"";$('ft').value=(p.t||[]).join("\n");$('ff').value="";
+function admTab(n){$('a1').style.display=n==1?'block':'none';$('a2').style.display=n==2?'block':'none';$('t1').className='btn'+(n==1?'':' ghost');$('t2').className='btn'+(n==2?'':' ghost')}
+function renderAdmin(){$('admlist').innerHTML=P.map(p=>`<div class="card arow"><div class="img">${pic(p)}</div><div class="i"><b>${p.n}</b>${fmt(p.pr)} · qoldiq ${p.stock}</div><button onclick="editP(${p.id})">✏️</button><button onclick="delP(${p.id})">🗑</button></div>`).join("")||"<div class='empty' style='padding:10px'>Hali mahsulot yo'q.</div>";
+ $('admcats').innerHTML=cats.map(c=>`<div class="card arow"><div class="img">${icon(c.id)}</div><div class="i"><b>${c.name}</b>${P.filter(p=>p.cat==c.id).length} ta mahsulot</div><button onclick="delCat(${c.id})">🗑</button></div>`).join("")}
+function renderPh(){$('fph').innerHTML=curPh.map((f,i)=>`<div><img src="${f.startsWith('data:')?f:purl(f)}"><span onclick="curPh.splice(${i},1);renderPh()">✕</span></div>`).join("")}
+function editP(id){const p=id?find(id):{};editId=id||null;curPh=[...(p.photos||[])];
+ $('fn').value=p.n||"";if(p.cat)$('fc').value=p.cat;$('fp').value=p.pr||"";$('fs').value=p.stock??"";$('fcol').value=(p.colors||[]).join(", ");$('fsz').value=(p.sizes||[]).join(", ");$('fi').value=p.info||"";$('ff').value="";renderPh();
  $('form').style.display='block';$('form').scrollIntoView({behavior:'smooth'})}
-function shrink(file){return new Promise(res=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,700/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);res(c.toDataURL('image/jpeg',.82))};im.src=r.result};r.readAsDataURL(file)})}
-async function saveP(){const n=$('fn').value.trim(),pr=+$('fp').value;if(!n||!pr)return toast("Nom va narxni yozing");
- try{let img=curImg;if($('ff').files[0])img=(await api('/api/upload',{method:'POST',body:JSON.stringify({image:await shrink($('ff').files[0])})})).url;
-  await api('/api/product',{method:'POST',body:JSON.stringify({id:editId,n,cat:+$('fc').value,pr,old:+$('fo').value||0,t:$('ft').value.split("\n").map(s=>s.trim()).filter(Boolean),img})});
-  toast("Saqlandi ✓");$('form').style.display='none';await load();renderAdmin()}catch(e){toast("Xatolik: "+e.message)}}
-async function delP(id){if(!confirm("Mahsulot o'chirilsinmi?"))return;try{await api('/api/product/'+id,{method:'DELETE'});await load();renderAdmin()}catch(e){toast("Xatolik: "+e.message)}}
+function shrink(file){return new Promise(res=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,900/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);res(c.toDataURL('image/jpeg',.85))};im.src=r.result};r.readAsDataURL(file)})}
+async function saveP(){const name=$('fn').value.trim(),price=+$('fp').value;if(!name||!price)return toast("Nom va narxni yozing");
+ $('sbtn').disabled=true;try{const ph=[...curPh];for(const f of $('ff').files){ph.push((await api('/api/upload',{method:'POST',body:JSON.stringify({image:await shrink(f)})})).file_id)}
+  await api('/api/product',{method:'POST',body:JSON.stringify({id:editId,cat_id:+$('fc').value,name,price,stock:+$('fs').value||0,colors:$('fcol').value,sizes:$('fsz').value,info:$('fi').value,photos:ph})});
+  toast("Saqlandi ✓");$('form').style.display='none';await load();renderAdmin()}catch(e){toast("Xatolik: "+e.message)}$('sbtn').disabled=false}
+async function delP(id){if(!confirm("Mahsulot o'chirilsinmi?"))return;try{await api('/api/product/'+id,{method:'DELETE'});await load();renderAdmin()}catch(e){toast(e.message)}}
+async function addCat(){const name=$('newcat').value.trim();if(!name)return;try{await api('/api/category',{method:'POST',body:JSON.stringify({name})});$('newcat').value="";await load();renderAdmin()}catch(e){toast(e.message)}}
+async function delCat(id){if(!confirm("Katalog yashirilsinmi? (ichidagi mahsulotlar ham ko'rinmay qoladi)"))return;try{await api('/api/category/'+id,{method:'DELETE'});await load();renderAdmin()}catch(e){toast(e.message)}}
 
 const u=tg.initDataUnsafe&&tg.initDataUnsafe.user;
 if(u){$('uname').textContent=[u.first_name,u.last_name].filter(Boolean).join(' ');$('uid').textContent=u.username?'@'+u.username:'ID: '+u.id;if(u.photo_url)$('ava').innerHTML=`<img src="${u.photo_url}" style="width:100%;height:100%;object-fit:cover">`}
-renderCats();load();
+load();
 </script>
 </body>
 </html>
