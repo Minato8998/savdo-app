@@ -110,7 +110,7 @@ nav b{position:absolute;top:2px;left:55%;background:var(--red);font-size:10px;bo
  <section class="view" id="prod"></section>
  <section class="view" id="help">
   <div class="top"><span class="back" onclick="go('home')">←</span><span>Yordam</span><span class="back"></span></div>
-  <div class="card menu"><div id="contact">📞 Aloqa</div><div onclick="tg.close&&tg.close()">💬 Botga qaytish</div></div>
+  <div class="card menu"><div id="contact">📞 Aloqa</div><div onclick="tg.openTelegramLink?tg.openTelegramLink('https://t.me/ADMIN_USERNAME'):window.open('https://t.me/ADMIN_USERNAME')">👨‍💼 Admin bilan bog'lanish</div><div onclick="tg.close&&tg.close()">💬 Botga qaytish</div></div>
  </section>
  <section class="view" id="me">
   <div class="top"><span class="back" onclick="go('home')">←</span><span>Profil</span><span class="back"></span></div>
@@ -223,11 +223,11 @@ function editP(id){const p=id?find(id):{};editId=id||null;curPh=[...(p.photos||[
  $('form').style.display='block';$('form').scrollIntoView({behavior:'smooth'})}
 function shrink(file){return new Promise(res=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,900/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);res(c.toDataURL('image/jpeg',.85))};im.src=r.result};r.readAsDataURL(file)})}
 async function saveP(){const name=$('fn').value.trim(),price=+$('fp').value;if(!name||!price)return toast("Nom va narxni yozing");
- $('sbtn').disabled=true;try{const ph=[...curPh];for(const f of $('ff').files){ph.push((await api('/api/upload',{method:'POST',body:JSON.stringify({image:await shrink(f)})})).file_id)}
-  await api('/api/product',{method:'POST',body:JSON.stringify({id:editId,cat_id:+$('fc').value,name,price,stock:+$('fs').value||0,colors:$('fcol').value,sizes:$('fsz').value,info:$('fi').value,photos:ph})});
+ $('sbtn').disabled=true;try{const ph=[...curPh];for(const f of $('ff').files){toast("Yangi rasmni botda /tez orqali qo'shing")}
+  await api('/api/product?d='+encodeURIComponent(JSON.stringify({id:editId,cat_id:+$('fc').value,name,price,stock:+$('fs').value||0,colors:$('fcol').value,sizes:$('fsz').value,info:$('fi').value,photos:ph})));
   toast("Saqlandi ✓");$('form').style.display='none';await load();renderAdmin()}catch(e){toast("Xatolik: "+e.message)}$('sbtn').disabled=false}
 async function delP(id){if(!confirm("Mahsulot o'chirilsinmi?"))return;try{await api('/api/product/'+id,{method:'DELETE'});await load();renderAdmin()}catch(e){toast(e.message)}}
-async function addCat(){const name=$('newcat').value.trim();if(!name)return;try{await api('/api/category',{method:'POST',body:JSON.stringify({name})});$('newcat').value="";await load();renderAdmin()}catch(e){toast(e.message)}}
+async function addCat(){const name=$('newcat').value.trim();if(!name)return;try{await api('/api/category?d='+encodeURIComponent(JSON.stringify({name})));$('newcat').value="";await load();renderAdmin()}catch(e){toast(e.message)}}
 async function delCat(id){if(!confirm("Katalog yashirilsinmi? (ichidagi mahsulotlar ham ko'rinmay qoladi)"))return;try{await api('/api/category/'+id,{method:'DELETE'});await load();renderAdmin()}catch(e){toast(e.message)}}
 
 const u=tg.initDataUnsafe&&tg.initDataUnsafe.user;
